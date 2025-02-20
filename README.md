@@ -1,0 +1,1 @@
+# Quality Engineering Playwright Pairing Exercise
