@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job:
+    displayName: 'End-to-end tests'
+    condition: 
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        packageType: sdk
+        version: '8.0.x'
+      displayName: 'Use .NET SDK'
+
+    - script: dotnet build --configuration Release
+      displayName: 'Build'
+
+    - script: pwsh bin/Release/net7.0/playwright.ps1 install --with-deps
+      displayName: 'Install Playwright browsers'
+
+    - script: dotnet test --configuration Release -- Playwright.BrowserName=chromium Playwright.LaunchOptions.Headless=false Playwright.LaunchOptions.Channel=chrome
+      displayName: 'Run tests'
