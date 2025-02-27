@@ -30,21 +30,3 @@ public class RetrospectiveTests : PageTest
         await Expect(Page.Locator("div").Filter(new() { HasText = "WorksTest AutomationAction" }).Nth(2)).ToContainTextAsync(expected);
     } 
 }
-
-
-// await Page.GotoAsync("https://www.retrotool.app/");
-// await Page.GetByRole(AriaRole.Link, new() { Name = "Start a new retro" }).ClickAsync();
-// await Page.GetByRole(AriaRole.Textbox, new() { Name = "It worked well that..." }).ClickAsync();
-// await Page.GetByRole(AriaRole.Textbox, new() { Name = "It worked well that..." }).FillAsync("Test Automation");
-// await Page.Keyboard.PressAsync("Enter");
-// await Page.GetByRole(AriaRole.Button, new() { Name = "Group & vote comments" }).ClickAsync();
-// await Page.Locator("reach-portal").GetByText("Group & vote comments").ClickAsync();
-// await Expect(Page.GetByRole(AriaRole.Group)).ToContainTextAsync("#00Test Automation");
-// await Page.GetByRole(AriaRole.Button, new() { Name = "Discuss and add action items" }).ClickAsync();
-// await Page.GetByRole(AriaRole.Button, new() { Name = "Finish retro" }).ClickAsync();
-// await Page.GetByRole(AriaRole.Textbox, new() { Name = "We need to do..." }).ClickAsync();
-// await Page.GetByRole(AriaRole.Textbox, new() { Name = "We need to do..." }).FillAsync("Keep doing it");
-// await Page.Keyboard.PressAsync("Enter");
-// await Page.GetByRole(AriaRole.Button, new() { Name = "Export" }).ClickAsync();
-// await Page.Locator("div").Filter(new() { HasText = "WorksTest AutomationAction" }).Nth(2).ClickAsync();
-// await Expect(Page.GetByRole(AriaRole.Group)).ToContainTextAsync("WorksTest AutomationAction ItemsKeep doing it");
