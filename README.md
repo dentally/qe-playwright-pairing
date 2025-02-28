@@ -6,9 +6,9 @@ The QE pairing tool uses an [online retrospective tool](https://www.retrotool.ap
 
 ## Introduction
 
-This pairing exercise will consist of 2 testing approaches around the same scenario. The code has **not** been written with best practice in mind, however you cna assume a junior engineer was given the following spec:
+This pairing exercise will consist of 2 testing approaches around the same scenario. The code has **not** been written with best practice in mind, however you can assume a junior engineer was given the following spec:
 
->If we use the retrospective tool and add some positive feedback and an actionable item does the final "exported" information contain all the necessary information for our technical lead to take away and see that they are actioned*
+>If we use the retrospective tool and add some positive feedback and an actionable item does the final "exported" information contain all the necessary information for our technical lead to take away and see that they are actioned
 
 >We have developed an external tool to send feedback from people who are unable to attend the meeting, we can assume that this application works perfectly but we need to check that if we create a retrospective and run the tool the feedback appears in the final export in the same way if added using the UI. TLDR: if feedback is added via the API does it appear in the UI
 
@@ -22,7 +22,13 @@ Given the above 2 scenarios we have the following scenarios:
 Both tests are broken, how you approach investigating why they are broken and potential avenues into fixing them is entirely at your discretion. We encourage you to ask as many questions as you need and this is not a pass/fail exercise it is a chance for us to see you approach a new codebase and diagnose failing tests. The assumption is that you will be familiar with Playwright and C# and will be able to talk through the steps you are taking to diagnose, critique and resolve any issues you see fit. 
 
 
+## Prerequisites 
 
+The playwright script that is generated at build time is a `.ps1` file so you need to have powershell installed if you are on a Mac and dont already have it installed.
+
+```sh
+brew install powershell
+```
 
 ## Getting Started
 
