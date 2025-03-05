@@ -25,7 +25,7 @@ public class RetrospectiveTests : PageTest
         await Expect(Page.GetByRole(AriaRole.Group)).ToContainTextAsync("#00Test Automation");
         await Page.ClickButton("Discuss and add action items");
         await Page.ClickButton("Finish retro");
-        await Page.EnterTextBoxText("We need to do.....", actionText);
+        await Page.EnterTextBoxText("We need to do..............", actionText);
         await Page.ClickButton("Export");
         await Expect(Page.Locator("div").Filter(new() { HasText = "WorksTest AutomationAction" }).Nth(2)).ToContainTextAsync(expected);
     } 
