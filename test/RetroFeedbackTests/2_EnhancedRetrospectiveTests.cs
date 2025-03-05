@@ -31,6 +31,7 @@ public class EnhancedRetrospectiveTests : PageTest
         await Task.Delay(1000);
         await Page.ClickButton("Export");
         //await Page.PauseAsync(); // 🪲 useful for debugging with the UI open
+        //await Task.Delay(1000); // Sometimes the export button takes a subsecond to render the final screen and the counts are 0
         var listOfWorks = Page.Locator("ul").Nth(0);
         var li = await listOfWorks.Locator("li").CountAsync();
         Assert.Equal(5, li);
